@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {{ super() }} {# 模板继承 #}
+    <div>test demo</div>
+{#    {% for message in get_flashed_messages() %}#}
+{#    <li>{{ message }}</li>#}
+{#    {% endfor %}#}
+{#    {% set messages = get_flashed_messages() %}#}
+{#    {{ messages }}<br>#}
+    {% with messages = get_flashed_messages() %}
+    {{ messages }}<br>
+    {% endwith %}
+    {{ messages | length()}}<br>
+    {{ messages == None}}<br>
+    {{ messages | default("未定义") }}
+    {{ form.xx | default('',True)}}<br>
+    {{ form.age  | default('age')}}<br>
+    {{ form.name  | default('sds',True)}}<br>
+{% endblock %}
