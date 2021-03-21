@@ -103,10 +103,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# add
+# All project settings
 .idea/
 
-# fisher
+# Fisher
 /__pycache__/
 /test
 basic.py
